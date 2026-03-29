@@ -1,0 +1,71 @@
+.page {
+  min-height: 100vh;
+  padding: 32px;
+  background: linear-gradient(180deg, #fcfaf5 0%, #efe8dc 100%);
+}
+
+.shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(22, 33, 43, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5d6a77;
+}
+
+.shell h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.lead {
+  max-width: 700px;
+  margin: 16px 0 0;
+  line-height: 1.8;
+  color: #506071;
+}
+
+.meta {
+  display: grid;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.meta div {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: #fffdfa;
+  border: 1px solid rgba(22, 33, 43, 0.08);
+}
+
+.meta dt {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5d6a77;
+}
+
+.meta dd {
+  margin: 8px 0 0;
+  font-size: 1rem;
+}
+
+.logout {
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #16212b;
+  color: #f8f4eb;
+  font-weight: 700;
+  cursor: pointer;
+}

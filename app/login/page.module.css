@@ -1,0 +1,86 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 196, 83, 0.16), transparent 40%),
+    linear-gradient(315deg, rgba(36, 89, 255, 0.14), transparent 40%),
+    #f4efe6;
+}
+
+.card {
+  width: min(100%, 480px);
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.9);
+  border: 1px solid rgba(22, 33, 43, 0.1);
+  box-shadow: 0 24px 50px rgba(22, 33, 43, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5d6a77;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.lead {
+  margin: 12px 0 0;
+  line-height: 1.7;
+  color: #556270;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(22, 33, 43, 0.14);
+  border-radius: 16px;
+  background: #fffdfa;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.95rem;
+}
+
+.submit {
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #16212b;
+  color: #f8f4eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back {
+  display: inline-flex;
+  margin-top: 20px;
+  color: #445364;
+  text-decoration: none;
+}
