@@ -85,7 +85,7 @@ export async function getSessionFromRequest(request: NextRequest) {
 
 async function getSessionByToken(token: string): Promise<SessionRecord | null> {
   const tokenHash = hashToken(token);
-  const rows = await sql<SessionRecord>`
+  const { rows } = await sql<SessionRecord>`
     SELECT s.id, s.user_id, u.email, u.name, s.expires_at
     FROM sessions s
     INNER JOIN users u ON u.id = s.user_id
