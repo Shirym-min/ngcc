@@ -13,7 +13,7 @@ export type UserRecord = {
 
 export async function findUserByEmail(email: string) {
   const normalizedEmail = email.trim().toLowerCase();
-  const { rows } = await sql<UserRecord>`
+  const rows = await sql<UserRecord>`
     SELECT id, email, name, password_hash
     FROM users
     WHERE email = ${normalizedEmail}

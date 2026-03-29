@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      POSTGRES_URL: ${POSTGRES_URL}
+      DATABASE_URL: ${DATABASE_URL}
       SESSION_COOKIE_NAME: ${SESSION_COOKIE_NAME:-ngcc_session}
       SESSION_SECRET: ${SESSION_SECRET}
     expose:
