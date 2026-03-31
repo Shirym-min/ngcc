@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NGCC Base",
-  description: "Next.js 15 homepage starter with TypeScript, session auth, and deployment scaffolding."
+  title: "NGCC Homepage",
+  description: "NGCCについて知る"
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
