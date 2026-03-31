@@ -6,13 +6,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "NGCC Homepage",
-  description: "NGCCについて知る"
+  description: "NGCCについて知る",
+  verification: {
+    google: "PrtBHj36yLTxUw8wlsIUwFhU0pG3t3HDOOQvx1QxYjM"
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
+    
     <html lang="ja">
       <body>
+        
         <Header />
         {children}
       </body>
