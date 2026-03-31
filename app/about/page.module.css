@@ -32,9 +32,10 @@
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  font-size: clamp(2.8rem, 4vw, 5.6rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
+  margin-bottom: 20vh;
 }
 
 .hero h2 {
@@ -119,6 +120,47 @@
   font-weight: 700;
 }
 
+.features h2 {
+  margin-top: 40px;
+  font-size: clamp(2rem, 2vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+.features p {
+  margin-top: -0.5rem;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
+}
+
+.featureinfo {
+  margin-top: 20vh;
+}
+
+.organizationChart {
+  margin-top: 24px;
+  padding: 24px 28px;
+  border: 1px solid rgba(22, 33, 43, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.organizationChart ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.organizationChart li {
+  margin: 0.9rem 0;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  line-height: 1.8;
+}
+
+.organizationChart p {
+  margin: 0.35rem 0 0;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
+  line-height: 1.8;
+  color: #425161;
+}
+
 @media (max-width: 768px) {
   .page {
     padding: 24px 16px 48px;
@@ -130,5 +172,9 @@
 
   .panel {
     padding: 20px;
+  }
+
+  .organizationChart {
+    padding: 18px 20px;
   }
 }
