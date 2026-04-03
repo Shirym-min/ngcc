@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { requireUser } from "@/lib/auth";
 
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "ダッシュボード",
+  description: "次世代共創会サイト運用用ダッシュボード",
+  robots: {
+    index: false,
+    follow: false
+  }
+};
 
 export default async function DashboardPage() {
   const user = await requireUser();

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "管理者ログイン",
+  description: "次世代共創会サイト管理者向けログインページ",
+  robots: {
+    index: false,
+    follow: false
+  }
+};
 
 type LoginPageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;

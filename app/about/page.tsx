@@ -1,38 +1,42 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import { createPageMetadata } from "@/lib/site";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "団体概要",
+  description:
+    "次世代共創会（NGCC）の基本理念、設立目的、組織情報、活動体制を紹介しています。",
+  path: "/about"
+});
 
 export default function HomePage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-
         <h1>この委員会について</h1>
-
-
         <section className={styles.features}>
           <section className={styles.feature}>
             <h2>基本理念</h2>
             <p>
-              若者が現代社会に対して問題意識を持ち、自ら行動することをサポートする
+              若者が現代社会に対して問題意識を持ち、自ら行動することをサポートします。
             </p>
           </section>
           <section className={styles.feature}>
             <h2>目的</h2>
             <p>
-              中高生ボランティアの力を活用し、母校（幼稚園）の課題解決と地域コミュニティの再建を図る
+              中高生ボランティアの力を活用し、母校である幼稚園の課題解決と地域コミュニティの再建を図ります。
             </p>
           </section>
           <section className={styles.feature}>
             <h2>展望</h2>
-            <p>
+            <ul>
               <li>世代を超えたコミュニケーションの実現</li>
-            </p>
+            </ul>
           </section>
           <section className={styles.featureinfo}>
             <h2>組織情報</h2>
             <p>
-              団体名　　　　：次世代共創会（NGCC / Next Generation Co-Creation)<br />
+              団体名　　　　：次世代共創会（NGCC / Next Generation Co-Creation）<br />
               代表（委員長）：S.Yasuda<br />
               副委員長　　　：M.Shirayama<br />
               事務局長　　　：H.H<br />
@@ -70,9 +74,6 @@ export default function HomePage() {
           </section>
         </section>
       </section>
-
-
-
     </main>
   );
 }
