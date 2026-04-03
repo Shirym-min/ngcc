@@ -177,4 +177,8 @@
   .organizationChart {
     padding: 18px 20px;
   }
+
+  .features p {
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  }
 }
