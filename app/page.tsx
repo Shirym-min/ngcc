@@ -14,7 +14,7 @@ export default function HomePage() {
     <main className={styles.page}>
       <section className={styles.hero}>
         <p className={styles.eyebrow}>NGCC</p>
-        <h1>次世代共創会</h1>
+        <h1>葛飾区のボランティア団体 次世代共創会</h1>
         <h2>Next Generation Co-Creation</h2>
         <p className={styles.lead}>
           若者が現代社会に対して問題意識を持ち、自ら行動することを支える団体です。
