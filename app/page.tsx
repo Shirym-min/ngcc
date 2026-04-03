@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { createPageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "次世代共創会 公式サイト",
+  title: "葛飾区の中高生ボランティア団体 次世代共創会（NGCC）",
   description:
     "次世代共創会（NGCC）の公式サイト。中高生ボランティアによる幼稚園支援、地域コミュニティ再建、活動理念をご紹介します。",
   path: "/",
