@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "次世代共創会",
+  searchName: "葛飾区次世代共創会",
   shortName: "NGCC",
   url: "https://ngcc.vercel.app",
   description:
@@ -43,7 +44,7 @@ export function createPageMetadata({
       title,
       description,
       url: canonical,
-      siteName: `${siteConfig.shortName} | ${siteConfig.name}`,
+      siteName: siteConfig.searchName,
       locale: siteConfig.locale,
       type: "website"
     },

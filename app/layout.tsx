@@ -8,8 +8,9 @@ import { createCanonical, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.searchName,
   title: {
-    default: `${siteConfig.shortName} | ${siteConfig.name}`,
+    default: `${siteConfig.searchName} | ${siteConfig.name}`,
     template: `%s | ${siteConfig.shortName}`
   },
   description: siteConfig.description,
@@ -18,16 +19,16 @@ export const metadata: Metadata = {
     canonical: createCanonical("/")
   },
   openGraph: {
-    title: `${siteConfig.shortName} | ${siteConfig.name}`,
+    title: `${siteConfig.searchName} | ${siteConfig.name}`,
     description: siteConfig.description,
     url: siteConfig.url,
-    siteName: `${siteConfig.shortName} | ${siteConfig.name}`,
+    siteName: siteConfig.searchName,
     locale: siteConfig.locale,
     type: "website"
   },
   twitter: {
     card: "summary",
-    title: `${siteConfig.shortName} | ${siteConfig.name}`,
+    title: `${siteConfig.searchName} | ${siteConfig.name}`,
     description: siteConfig.description
   },
   verification: {
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: siteConfig.name,
-  alternateName: siteConfig.shortName,
+  name: siteConfig.searchName,
+  alternateName: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.description
 };
@@ -48,7 +49,7 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: `${siteConfig.shortName} | ${siteConfig.name}`,
+  name: siteConfig.searchName,
   url: siteConfig.url,
   inLanguage: "ja-JP",
   description: siteConfig.description
