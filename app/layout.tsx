@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "NGCC Homepage",
   description: "NGCCについて知る",
   verification: {
-    google: "PrtBHj36yLTxUw8wlsIUwFhU0pG3t3HDOOQvx1QxYjM"
+    google: "eT9sHveeFbfvjXba3qAb6aMOkifUU75c7NAcO-pZ9pM"
   }
 };
 
