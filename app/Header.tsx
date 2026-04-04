@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./Header.module.css";
 
@@ -33,6 +34,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ""}`}>
       <div className={styles.inner}>
+        <Link aria-label="NGCC ホーム" className={styles.logoLink} href="/" onClick={handleLinkClick}>
+          <Image
+            alt="NGCC Logo"
+            className={styles.logo}
+            height={60}
+            src="/images/logo.png"
+            width={60}
+          />
+        </Link>
         <button
           aria-controls="header-navigation"
           aria-expanded={isOpen}
