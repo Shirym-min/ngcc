@@ -1,12 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMenuToggle = () => {
     setIsOpen((current) => !current);
@@ -17,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ""}`}>
       <div className={styles.inner}>
         <button
           aria-controls="header-navigation"
@@ -40,6 +54,9 @@ export default function Header() {
           </Link>
           <Link className={styles.link} href="/about">
             団体概要
+          </Link>
+          <Link className={styles.link} href="/ccc">
+            園イベント共創委員会
           </Link>
         </nav>
       </div>

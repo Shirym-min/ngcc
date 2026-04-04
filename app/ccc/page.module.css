@@ -132,8 +132,9 @@
 }
 
 .features li {
-  margin-top: -0.5rem;
+
   font-size: clamp(1.5rem, 1.5vw, 3rem);
+
 }
 
 .featureinfo {
@@ -186,6 +187,7 @@
   .features p {
     font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   }
+
   .features li {
     font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   }
