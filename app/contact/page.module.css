@@ -83,33 +83,6 @@
   box-shadow: 0 26px 48px rgba(22, 33, 43, 0.22);
 }
 
-.contactButton:disabled {
-  cursor: wait;
-  opacity: 0.72;
-  transform: none;
-  gap: 14px;
-  box-shadow: 0 20px 40px rgba(22, 33, 43, 0.12);
-}
-
-.recaptchaBlock {
-  margin-top: 10px;
-}
-
-.recaptchaNote,
-.recaptchaError {
-  margin: 12px 0 0;
-  font-size: clamp(0.95rem, 1vw, 1.05rem) !important;
-  line-height: 1.7;
-}
-
-.recaptchaNote {
-  color: #425161;
-}
-
-.recaptchaError {
-  color: #b3362f;
-}
-
 
 .primary,
 .secondary {

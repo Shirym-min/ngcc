@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import { createPageMetadata } from "@/lib/site";
-import VolunteerResultInquiryButton from "./VolunteerResultInquiryButton";
 
 export const metadata: Metadata = createPageMetadata({
   title: "お問い合わせ",
@@ -11,9 +10,6 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function HomePage() {
-  const volunteerResultInquiryHref =
-    "mailto:kodomonosono.ccc@gmail.com?subject=ボランティア証明書に関する活動状況の確認について&body=以下の内容をご記入ください。%0A%0A氏名または団体名：%0Aボランティア番号：%0A内容：";
-
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
@@ -39,7 +35,13 @@ export default function HomePage() {
             <ul>
               <li>ボランティア番号が必要です。</li>
             </ul>
-            <VolunteerResultInquiryButton href={volunteerResultInquiryHref} />
+            <a
+              className={styles.contactButton}
+              href="mailto:kodomonosono.ccc@gmail.com?subject=ボランティア証明書に関する活動状況の確認について&body=以下の内容をご記入ください。%0A%0A氏名または団体名：%0Aボランティア番号：%0A内容："
+              rel="noopener noreferrer"
+            >
+              お問い合わせはこちらから
+            </a>
           </section>
           <section className={styles.feature}>
             <h2>そのほかのお問い合わせ</h2>
