@@ -68,8 +68,15 @@ export default function Header() {
           <Link className={styles.link} href="/ccc">
             園イベント共創委員会
           </Link>
+          
           <Link className={styles.link} href="/cpic">
             CPIC
+          </Link>
+          <Link className={styles.link} href="/volunteer">
+            ボランティア
+          </Link>
+          <Link className={styles.link} href="/contact">
+            お問い合わせ
           </Link>
         </nav>
       </div>

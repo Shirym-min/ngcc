@@ -13,12 +13,12 @@ export default function HomePage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <h1>名前は保留中(CPIC)</h1>
+        <h1>CPIC</h1>
         <section className={styles.features}>
           <section className={styles.feature}>
             <h2>概要</h2>
             <p>
-              CPIC（保育政策共創会議 / Childcare Policy Innovation Conference）は、CCCモデルの全国拡大を目的とした政策組織です。
+              CPICは、CCCモデルの全国拡大を目的とした政策組織です。
 
 CCCの成功モデルを他園・他地域に展開し、中高生ボランティアによる幼稚園支援の仕組みを日本全国に広めることを目指しています。
             </p>
