@@ -7,16 +7,16 @@ declare module "react-google-recaptcha" {
     theme?: "dark" | "light";
     tabindex?: number;
     onChange?: (token: string | null) => void;
-    onExpired?: () => void;
     onErrored?: () => void;
+    onExpired?: () => void;
   };
 
   export default class ReCAPTCHA extends Component<ReCAPTCHAProps> {
-    executeAsync(): Promise<string | null>;
-    reset(): void;
     execute(): void;
+    executeAsync(): Promise<string | null>;
     getValue(): string | null;
     getWidgetId(): number;
+    reset(): void;
   }
 
   export type ReCAPTCHAInstance = InstanceType<typeof ReCAPTCHA>;

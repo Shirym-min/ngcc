@@ -1,11 +1,22 @@
 "use client";
 
+import dynamic from "next/dynamic";
+import type React from "react";
 import { useRef, useState, useTransition } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 
 import styles from "./page.module.css";
 
 const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+}) as unknown as React.ComponentType<{
+  ref?: React.Ref<{
+    executeAsync: () => Promise<string | null>;
+    reset: () => void;
+  }>;
+  sitekey: string;
+  size?: "compact" | "invisible" | "normal";
+}>;
 
 type VolunteerResultInquiryButtonProps = {
   href: string;
@@ -14,7 +25,10 @@ type VolunteerResultInquiryButtonProps = {
 export default function VolunteerResultInquiryButton({
   href,
 }: VolunteerResultInquiryButtonProps) {
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  const recaptchaRef = useRef<{
+    executeAsync: () => Promise<string | null>;
+    reset: () => void;
+  } | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [isPending, startTransition] = useTransition();
 
@@ -43,7 +57,7 @@ export default function VolunteerResultInquiryButton({
           method: "POST",
         });
 
-        const result = (await response.json()) as { success?: boolean; message?: string };
+        const result = (await response.json()) as { message?: string; success?: boolean };
 
         if (!response.ok || !result.success) {
           setErrorMessage(result.message ?? "認証に失敗しました。もう一度お試しください。");
@@ -70,7 +84,7 @@ export default function VolunteerResultInquiryButton({
       >
         {isPending ? "認証中です..." : "お問い合わせはこちらから"}
       </button>
-      <ReCAPTCHA ref={recaptchaRef} sitekey={siteKey} size="invisible" />
+      {siteKey ? <ReCAPTCHA ref={recaptchaRef} sitekey={siteKey} size="invisible" /> : null}
       <p className={styles.recaptchaNote}>
         このボタンは reCAPTCHA によって保護されています。
       </p>

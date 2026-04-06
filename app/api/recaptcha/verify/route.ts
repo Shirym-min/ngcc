@@ -4,8 +4,8 @@ const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
 const minimumScore = 0.5;
 
 type RecaptchaVerifyResponse = {
-  success: boolean;
   score?: number;
+  success: boolean;
 };
 
 export async function POST(request: Request) {
