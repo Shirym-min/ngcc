@@ -18,10 +18,7 @@ export default function HomePage() {
         <h1><span className={styles.subtitle}>葛飾区のボランティア団体</span><br/>次世代共創会</h1>
         <h2>Next Generation Co-Creation</h2>
         <p className={styles.lead}>
-          若者が現代社会に対して問題意識を持ち、自ら行動することを支える葛飾区の団体です。
-          <br />
-          中高生ボランティアの力を活用し、創立者の母校である葛飾こどもの園幼稚園の課題解決と、
-          地域コミュニティの再建を目指して2026年3月に設立されました。
+          このウェブサイトは停止しています。
         </p>
       </section>
     </main>

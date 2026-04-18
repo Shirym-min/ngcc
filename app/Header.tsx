@@ -62,9 +62,12 @@ export default function Header() {
           <Link className={styles.link} href="/" onClick={handleLinkClick}>
             ホーム
           </Link>
-          <Link className={styles.link} href="/about">
+          {/*
+            <Link className={styles.link} href="/about">
             団体概要
           </Link>
+          */}
+          
           <Link className={styles.link} href="/ccc">
             園イベント共創委員会
           </Link>

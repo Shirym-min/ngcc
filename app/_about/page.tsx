@@ -13,18 +13,18 @@ export default function HomePage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <h1>この委員会について</h1>
+        <h1>この会について</h1>
         <section className={styles.features}>
           <section className={styles.feature}>
             <h2>基本理念</h2>
             <p>
-              若者が現代社会に対して問題意識を持ち、自ら行動することをサポートします。
+              若者の意思を、社会を動かす確かな力にする
             </p>
           </section>
           <section className={styles.feature}>
             <h2>目的</h2>
             <p>
-              中高生ボランティアの力を活用し、母校である幼稚園の課題解決と地域コミュニティの再建を図ります。
+              幼稚園のコミュニティを通して人同士のつながりを広げていきます。
             </p>
           </section>
           <section className={styles.feature}>
