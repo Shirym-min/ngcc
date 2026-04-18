@@ -61,10 +61,7 @@ export default function HomePage() {
                           <strong>園イベント共創委員会（CCC）【実働組織】</strong>
                           <p>幼稚園のイベント運営補助・集客支援</p>
                         </li>
-                        <li>
-                          <strong>保育政策共創会【全体に関する組織】</strong>
-                          <p>CCCモデルの普及を目的とした組織</p>
-                        </li>
+                        
                       </ul>
                     </li>
                   </ul>
