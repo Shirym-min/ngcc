@@ -25,7 +25,7 @@ export default function HomePage() {
             </p>
             <div className={styles.instagramLink}>
               <Link className={styles.link}href="https://www.instagram.com/ngcc.kodomonosono?igsh=dHdtMXluN3BrbDM4" target="_blank" rel="noopener noreferrer">
-                <Image className={styles.image} alt="Instagram QR Code" height={200} src="/images/instagram.jpg" width={200} />
+                <Image className={styles.image} alt="Instagram QR Code" height={200} src="/images/Instagram.jpg" width={200} />
               </Link>
             </div>
           </section>
